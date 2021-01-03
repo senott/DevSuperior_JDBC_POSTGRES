@@ -82,3 +82,12 @@ SELECT * FROM tb_order
 INNER JOIN tb_order_product ON tb_order.id = tb_order_product.order_id
 INNER JOIN tb_product ON tb_product.id = tb_order_product.product_id
 ```
+
+## Criar Docker Container para PostgreSQL
+```bash
+docker run --name devsuperior_postgres -e POSTGRES_PASSWORD=pgsqldocker -d -p 5433:5432 postgres:12
+```
+## Rodar Docker Container do Banco de Dados
+```bash
+docker start devsuperior_postgres
+```
